@@ -8,23 +8,26 @@
             <form class="form" method="post">
               <div class="form-group">
                 <label for="NameTextField">Title</label>
-                <input type="text" class="form-control" id="NameTextField"
-                placeholder="Book Name" name="title" value="<%= books.Title %>" required>
+                <input type="text" class="form-control" id="NameTextField" placeholder="Book Name"
+                 name="title" <% if(typeof books !== 'undefined') { %> value="<%= books.Title %>" <% } %> required>
               </div>
+              
               <div class="form-group">
                 <label for="PriceTextField">Price</label>
-                <input type="text" class="form-control" id="PriceTextField"
-                placeholder="Book Price" name="price" value="<%= books.Price %>"  required>
+                <input type="text" class="form-control" id="PriceTextField" placeholder="Book Price"
+                 name="price" <% if(typeof books !== 'undefined') { %> value="<%= books.Price %>" <% } %> required>
               </div>
+
               <div class="form-group">
                 <label for="AuthorTextField">Author</label>
-                <input type="text" class="form-control" id="AuthorTextField"
-                placeholder="Book Author" name="author" value="<%= books.Author %>"  required>
+                <input type="text" class="form-control" id="AuthorTextField" placeholder="Book Author"
+                 name="author" <% if(typeof books !== 'undefined') { %> value="<%= books.Author %>" <% } %> required>
               </div>
+
               <div class="form-group">
                 <label for="GenreTextField">Genre</label>
-                <input type="text" class="form-control" id="GenreTextField"
-                placeholder="Book Genre" name="genre" value="<%= books.Genre %>"  required>
+                <input type="text" class="form-control" id="GenreTextField" placeholder="Book Genre"
+                name="genre" <% if(typeof books !== 'undefined') { %> value="<%= books.Genre %>" <% } %> required>
               </div>
 
               <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
